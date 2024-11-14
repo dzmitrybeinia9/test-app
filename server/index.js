@@ -77,6 +77,7 @@ app.listen(5001, () => {
 
 const connectDB = async () => {
   try {
+      console.log("Connecting to MongoDB...");
       const conn = await mongoose.connect("mongodb+srv://dzmitrybeinia:FhtO7IwKZTFBNSyp@dzbe-mongo-cluster.kfphd.mongodb.net/test?retryWrites=true&w=majority&appName=dzbe-mongo-cluster");
       console.log(`MongoDB connected: ${conn.connection.host}`);
   } catch (error) {
